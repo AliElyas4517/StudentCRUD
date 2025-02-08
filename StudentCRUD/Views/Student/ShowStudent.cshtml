@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Student List";
+}
+
+<h2>Student Details</h2>
+
+<div class="row">
+    <table id="tblStudent" border="1" class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr class="col-md-12">
+                <th class="col-md-3">ID</th>
+                <th class="col-md-3">Student Name</th>
+                <th class="col-md-3">Student Address</th>
+                <th class="col-md-3" name="action">Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<button id="btnAddNew" class="btn btn-primary">Add</button>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            LoadData(); // Load initial data when the page loads
+
+            $("#btnAddNew").click(function () {
+                // Open the Add Student view in a popup window
+                window.location.href = "/Student/Index";
+            });
+
+            // Function to load all students from the server via AJAX
+            function LoadData() {
+                $("#tblStudent tbody").empty(); // Clear existing table data
+                $.ajax({
+                    type: "GET",
+                    url: "/Student/ShowStudent", // URL of the GetStudents action
+                    success: function (students) {
+                        $.each(students, function (i, student) {
+                            addStudentToTable(student); // Add each student to the table
+                        });
+                    },
+                    error: function (error) {
+                        console.error("Error loading students:", error); // Log errors to the console
+                        alert("An error occurred while loading students. Please check the console."); // Alert the user
+                    }
+                });
+            }
+        });
+    </script>
+}

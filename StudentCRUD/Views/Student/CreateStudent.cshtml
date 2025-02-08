@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Add A New Student";
+}
+
+<h2>Add A New Student</h2>
+
+<div>
+    <input type="text" id="StudentName" placeholder="Enter Student Name" />
+    <input type="text" id="StudentAddress" placeholder="Enter Student Address" />
+    <button id="btnSave">Save</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $("#btnSave").click(function () {
+        var student = {
+            studentName: $("#StudentName").val(),
+            studentAddress: $("#StudentAddress").val()
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "/Student/CreateStudent",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(student),
+            success: function (response) {
+                if (response.success) {
+                    alert(response.message);
+
+                    // Check if window.opener exists and the function is defined
+                    if (window.opener && window.opener.LoadData) {
+                        window.opener.LoadData(); // Call LoadData in the parent window to refresh the table
+                    } else {
+                        console.error("Could not communicate with parent window or LoadData function is not defined.");
+                        // Optional: window.location.href = "/Student/Index"; // Redirect if not a popup
+                    }
+
+                    window.close();
+                } else {
+                    alert("Error adding student!");
+                }
+            },
+            error: function (error) {
+                console.error("AJAX error:", error);
+                alert("An error occurred while adding the student. Please check the console.");
+            }
+        });
+    });
+</script>

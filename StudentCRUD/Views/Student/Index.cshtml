@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = "Student List";
+}
+
+<h2>Student List</h2>
+
+<div class="row">
+    <table id="tblStudent" border="1" class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr class="col-md-12">
+                <th class="col-md-3">ID</th>
+                <th class="col-md-3">Student Name</th>
+                <th class="col-md-3">Student Address</th>
+                <th class="col-md-3" name="action">Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<button id="btnAddNew" class="btn btn-primary">Add</button>
+
+<div class="modal fade" id="studentDetailsModal" tabindex="-1" aria-labelledby="studentDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="studentDetailsModalLabel">Student Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="studentName"></p>  </p>
+                <p id="studentAddress"></p>  </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            LoadData(); // Load initial data when the page loads
+
+            $("#btnAddNew").click(function () {
+                // Open the Add Student view in a popup window
+                window.open("/Student/AddStudent", "CreateStudentPopup", "width=600,height=400");
+            });
+            // Show Student Details
+            $("#tblStudent").on("click", ".btnShow", function () {
+                var studentId = $(this).data("id");
+
+                $.ajax({
+                    type: "GET",
+                    url: "/Student/ShowStudent?id=" + studentId, // Correct URL with ID
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.success === false) {
+                            alert(response.message);
+                        } else {
+                            $("#studentName").text(response.studentName);
+                            $("#studentAddress").text(response.studentAddress);
+                            // ... (set other details in the modal)
+                            $("#studentDetailsModal").modal('show'); // Show the modal
+                        }
+                    },
+                    error: function (error) {
+                        console.error("AJAX error:", error);
+                        alert("An error occurred while fetching details.");
+                    }
+                });
+            });
+
+            //Edit A Student
+
+            $("#tblStudent").on("click", ".btnUpdate", function () {
+                var studentId = $(this).data("id");
+                window.location.href = `/Student/EditStudent?id=${studentId}`; // Simplified URL
+            });
+
+            // Delete A Student
+            $("#tblStudent").on("click", ".btnDelete", function () { // Corrected selector and event delegation
+                window.location.href = `/Student/DeleteConfirmation/${studentId}`; // Pass ID in the URL
+            });
+
+
+            // Function to add a single student row to the table
+            function addStudentToTable(student) {
+                $("#tblStudent tbody").append(`<tr>
+                                                                <td>${student.studentID}</td>
+                                                                <td>${student.studentName}</td>
+                                                                <td>${student.studentAddress}</td>
+                                                                <td style="display: flex;justify-content: space-around;">
+                                                                    <button id="btnShow" class="btn btn-sm btn-primary btnShow" data-id="${student.studentID}">
+                                                                        <i class="bi bi-eye"></i> Show </button>
+                                                                    <button id="btnUpdate" class="btn btn-sm btn-info btnUpdate" data-id="${student.studentID}">
+                                                                        <i class="bi bi-pencil-square"></i> Update </button>
+                                                                    <button id="btnDelete" class="btn btn-sm btn-danger btnDelete" data-id="${student.studentID}">
+                                                                        <i class="bi bi-trash"></i> Delete </button>
+                                                                </td>
+                                                            </tr>`);
+            }
+
+            // Function to load all students from the server via AJAX
+            function LoadData() {
+                $("#tblStudent tbody").empty(); // Clear existing table data
+                $.ajax({
+                    type: "GET",
+                    url: "/Student/GetStudents", // URL of the GetStudents action
+                    success: function (students) {
+                        $.each(students, function (i, student) {
+                            addStudentToTable(student); // Add each student to the table
+                        });
+                    },
+                    error: function (error) {
+                        console.error("Error loading students:", error); // Log errors to the console
+                        alert("An error occurred while loading students. Please check the console."); // Alert the user
+                    }
+                });
+            }
+        });
+
+    </script>
+}

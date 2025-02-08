@@ -1,0 +1,20 @@
+﻿@model StudentCRUD.Models.Student
+@{
+    ViewData["Title"] = "Edit Student";
+}
+
+<h2>Edit Student</h2>
+
+<form method="post">
+    <input type="hidden" name="StudentID" value="@Model.StudentID" /> @* Hidden ID *@
+
+    <label for="StudentName">Student Name:</label>
+    <input type="text" name="StudentName" value="@Model.StudentName" />
+    <br />
+
+    <label for="StudentAddress">Student Address:</label>
+    <input type="text" name="StudentAddress" value="@Model.StudentAddress" />
+    <br />
+
+    <button type="submit">Save</button>
+</form>
