@@ -62,8 +62,7 @@
               "RelativeToolTip": "StudentCRUD\\Views\\Student\\DeleteConfirmation.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-30T12:10:44.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-30T12:10:44.899Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "StudentCRUD\\Views\\Student\\EditStudent.cshtml",
               "ViewState": "AgIAABMAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-30T11:19:50.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-30T11:19:50.086Z"
             },
             {
               "$type": "Document",
@@ -86,7 +84,7 @@
               "RelativeDocumentMoniker": "StudentCRUD\\Views\\Student\\ShowStudent.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\StudentCRUD\\StudentCRUD\\Views\\Student\\ShowStudent.cshtml",
               "RelativeToolTip": "StudentCRUD\\Views\\Student\\ShowStudent.cshtml",
-              "ViewState": "AgIAAAcAAADgZGZmZmYkwBMAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-30T07:56:30.616Z",
               "EditorCaption": ""
@@ -101,8 +99,7 @@
               "RelativeToolTip": "StudentCRUD\\Views\\Student\\CreateStudent.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-30T05:11:33.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-30T05:11:33.347Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "StudentCRUD\\Views\\Student\\Index.cshtml",
               "ViewState": "AgIAADYAAAAAAAAAAACJvXMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-29T11:50:53.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T11:50:53.348Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "StudentCRUD\\Controllers\\StudentController.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAA8wGkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T11:58:40.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T11:58:40.956Z"
             },
             {
               "$type": "Document",

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\StudentCRUD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FF740FDF-B6FE-41A5-ACFD-F9D86C2C10B5}|StudentCRUD\\StudentCRUD.csproj|c:\\users\\administrator\\source\\repos\\studentcrud\\studentcrud\\views\\student\\createstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF740FDF-B6FE-41A5-ACFD-F9D86C2C10B5}|StudentCRUD\\StudentCRUD.csproj|solutionrelative:studentcrud\\views\\student\\createstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FF740FDF-B6FE-41A5-ACFD-F9D86C2C10B5}|StudentCRUD\\StudentCRUD.csproj|c:\\users\\administrator\\source\\repos\\studentcrud\\studentcrud\\views\\student\\showstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FF740FDF-B6FE-41A5-ACFD-F9D86C2C10B5}|StudentCRUD\\StudentCRUD.csproj|solutionrelative:studentcrud\\views\\student\\showstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FF740FDF-B6FE-41A5-ACFD-F9D86C2C10B5}|StudentCRUD\\StudentCRUD.csproj|c:\\users\\administrator\\source\\repos\\studentcrud\\studentcrud\\views\\student\\editstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FF740FDF-B6FE-41A5-ACFD-F9D86C2C10B5}|StudentCRUD\\StudentCRUD.csproj|solutionrelative:studentcrud\\views\\student\\editstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF740FDF-B6FE-41A5-ACFD-F9D86C2C10B5}|StudentCRUD\\StudentCRUD.csproj|c:\\users\\administrator\\source\\repos\\studentcrud\\studentcrud\\views\\student\\createstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF740FDF-B6FE-41A5-ACFD-F9D86C2C10B5}|StudentCRUD\\StudentCRUD.csproj|solutionrelative:studentcrud\\views\\student\\createstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF740FDF-B6FE-41A5-ACFD-F9D86C2C10B5}|StudentCRUD\\StudentCRUD.csproj|c:\\users\\administrator\\source\\repos\\studentcrud\\studentcrud\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -50,11 +50,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DeleteConfirmation.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\StudentCRUD\\StudentCRUD\\Views\\Student\\DeleteConfirmation.cshtml",
               "RelativeDocumentMoniker": "StudentCRUD\\Views\\Student\\DeleteConfirmation.cshtml",
@@ -66,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EditStudent.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\StudentCRUD\\StudentCRUD\\Views\\Student\\EditStudent.cshtml",
               "RelativeDocumentMoniker": "StudentCRUD\\Views\\Student\\EditStudent.cshtml",
@@ -78,20 +82,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ShowStudent.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\StudentCRUD\\StudentCRUD\\Views\\Student\\ShowStudent.cshtml",
               "RelativeDocumentMoniker": "StudentCRUD\\Views\\Student\\ShowStudent.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\StudentCRUD\\StudentCRUD\\Views\\Student\\ShowStudent.cshtml",
               "RelativeToolTip": "StudentCRUD\\Views\\Student\\ShowStudent.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAwszMzMwHwAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-30T07:56:30.616Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "CreateStudent.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\StudentCRUD\\StudentCRUD\\Views\\Student\\CreateStudent.cshtml",
               "RelativeDocumentMoniker": "StudentCRUD\\Views\\Student\\CreateStudent.cshtml",
@@ -99,7 +103,8 @@
               "RelativeToolTip": "StudentCRUD\\Views\\Student\\CreateStudent.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-30T05:11:33.347Z"
+              "WhenOpened": "2025-01-30T05:11:33.347Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
